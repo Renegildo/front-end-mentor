@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Roboto";
+    src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36384D;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+
+.container .form {
+    padding-left: 10px;
+    width: 400px;
+}
+
+.container .form h1 {
+    font-size: 50px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    color: #222641;
+}
+
+.container .form > p {
+    margin-bottom: 20px;
+}
+
+.container .img {
+    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.container .form ul {
+    margin-bottom: 30px;
+}
+
+.container .form li {
+    margin-bottom: 5px;
+}
+
+.container .form li img, .container .form li p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container .form li p {
+    transform: translateY(-4px);
+}
+
+.container .form .email input {
+    border: 1px solid  #C5C5C5;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+}
+
+.container .form .email input:focus {
+    border: 1px solid black;
+}
+
+.container .form .email span {
+    display: flex;
+}
+
+.container .form .email p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.container .form .email p:last-child {
+    margin-left: 180px;
+    color: #c92617;
+    display: none;
+}
+
+.container .form .button {
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    width: 345px;
+    border-radius: 10px;
+    background-color: #232742;
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+
+
+.container .form .button:hover {
+    background-image: linear-gradient(to right, #FF537B, #FF693B);
+    box-shadow: 0 5px 30px #ff693bc5;
+}

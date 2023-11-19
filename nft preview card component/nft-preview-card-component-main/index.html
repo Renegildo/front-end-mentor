@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFT Card Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(217, 54%, 11%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Outfit", Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: hsl(216, 50%, 16%);
+      width: 350px;
+      height: 596px;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .container .side:first-child {
+      width: 303px;
+      height: 303px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background-image: url(images/image-equilibrium.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container .side:last-child h2 {
+      color: white;
+      font-size: 24px;
+      padding-bottom: 22px;
+    }
+
+    .container .side:last-child p {
+      font-size: 18px;
+      color: hsl(215, 19%, 52%);
+    }
+
+    .container .side:last-child span {
+      display: flex;
+      height: 22px;
+      margin-top: 28px;
+    }
+
+    .container .side:last-child span h3 {
+      color: hsl(178, 100%, 50%);
+      margin-right: 140px;
+      margin-left: 10px;
+    }
+
+    .container .side:last-child #line {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-color: hsl(215, 50%, 39%);
+    }
+
+    .container .side:last-child footer {
+      display: flex
+    }
+
+    .container .side:last-child footer img {
+      width: 33px;
+      height: 33px;
+      border-radius: 100%;
+      margin-right: 15px;
+      border: 1px solid white;
+    }
+    
+    .container .side:last-child footer p {
+      margin-top: 5px;
+    }
+
+    .container .side:last-child a {
+      color: hsl(215, 51%, 70%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="side">
+
+    </div>
+    <div class="side">
+      <h2>Equilibrium #3429</h2>
+      <p>Our equilibrium collection promotes balance and calm.</p>
+
+      <span>
+        <img src="images/icon-ethereum.svg" alt="">
+        <h3>0.041ETH</h3>
+        <img src="images/icon-clock.svg" alt="">
+        <p>3 days left</p>
+      </span>
+      <hr id="line">
+      <footer>
+        <img src="images/image-avatar.png" alt="">
+        <p>Creation of <a href="#">Jules Wyvern</a></p>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

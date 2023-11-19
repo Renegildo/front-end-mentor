@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter sign up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ products managers receiving monthly updates on:</p>
+      
+      <ul>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="">
+          <p>Product discovery and building what matters</p>
+        </li>
+        <li>
+            <img src="assets/images/icon-list.svg" alt="">
+            <p>Measuring to ensure updates are a sucess</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-list.svg" alt="">
+          <p>And much more!</p>
+        </li>
+      </ul>
+        
+      <span class="email">
+        <span><p>Email adress</p> <p>Valid email required</p></span>
+        <input type="email" name="" id="email" placeholder="email@company.com">
+      </span>
+
+      <a href="#" class="button" onclick="validateEmail()">Subscribe to monthly newsletter</a>
+    </div>
+    <div class="img">
+    </div>
+  </div>
+  <script>
+    const EMAILREGEX = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/gm;
+    
+    let errorMensage = document.querySelector(".email span p:last-child");
+    let emailLabel   = document.querySelector(".email span p:first-child");
+    let emailInput   = document.querySelector(".email input");
+
+    let emailField   = document.querySelector("input#email");
+
+    function removeError() {
+      errorMensage.style.display = "none";
+      emailField.style.border = "1px solid #C5C5C5";
+      emailField.style.backgroundColor = "";
+      emailLabel.style.color = "black";
+      emailInput.style.color = "black";
+    }
+
+    function validateEmail() {
+	  if (EMAILREGEX.test(emailField.value) || emailField.value == "") {
+        removeError();
+      } else {
+        errorMensage.style.display = "block";
+        emailField.style.border = "1px solid #c92617";
+        emailField.style.backgroundColor = "rgba(255, 28, 8, 0.219)";
+        emailLabel.style.color = "#c92617";
+        emailInput.style.color = "#c92617";
+      }
+    }
+  </script>
+</body>
+</html>

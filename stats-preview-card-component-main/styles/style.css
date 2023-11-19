@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: rgb(137, 136, 154);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 12, 27);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lado dos textos */
+
+.container .side:first-child {
+    padding: 50px;
+    background-color: rgb(28, 25, 56);
+    width: 410px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.container .side:first-child h2 {
+    color: white;
+    padding-bottom: 32px;
+}
+
+.container .side:first-child h2 span {
+    color: rgb(174, 95, 220);
+}
+
+.container .side:first-child p {
+    padding-bottom: 60px;
+}
+
+.container .side:first-child ul li {
+    padding-right: 40px;
+}
+
+.container .side:first-child ul li h3 {
+    color: white;
+}
+
+.container .side:first-child ul li h4 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Lado da imagem */
+
+.container .side:last-child {
+    width: 540px;
+    height: 353px;
+    background-image: url("../images/image-header-desktop.jpg");
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container .side:last-child .color {
+    background-color: rgb(90, 2, 90);
+    width: 200px;
+    height: 353px;
+    width: 540px;
+    filter: opacity(60%);
+}

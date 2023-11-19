@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Rating Component</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="images/icon-star.svg" alt="star">
+    <h1>How did we do?</h1>
+    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    <ul>
+      <li onmouseenter="Hover()"><h1>1</h1></li>
+      <li><h1>2</h1></li>
+      <li><h1>3</h1></li>
+      <li><h1>4</h1></li>
+      <li><h1>5</h1></li>
+    </ul>
+    <div class="button">
+      <a href="#">SUBMIT</a>
+    </div>
+  </div>
+  <script>
+    let lis = document.querySelectorAll("li")
+    lis.forEach(element => {
+      element.addEventListener("click", ChangeBgColor(self))
+    });
+
+    function ChangeBgColor(element) {
+      window.alert("penes")
+      element.style.backgroundColor = "rgb(252, 118, 19)"
+    }
+
+  </script>
+</body>
+</html>

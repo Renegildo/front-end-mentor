@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <title>Age Calculator App</title> 
+</head>
+<body>
+    <div class="container">
+          <div class="side">
+                    <ul>
+                         <li>
+                              <p>DAY</p>
+                              <input type="number" name="" id="day" placeholder="DD">
+                         </li>
+
+                         <li>
+                              <p>MONTH</p>
+                              <input type="number" name="" id="month" placeholder="MM">
+                         </li>
+
+                         <li>
+                              <p>YEAR</p>
+                              <input type="number" name="" id="year" placeholder="YYYY">
+                         </li>
+                    </ul>
+               </div>
+
+               <div class="button" onclick="clicked()">
+                    <img src="assets/images/icon-arrow.svg" alt="nao ta carregano a image">
+               </div>
+
+          <div class="side">
+               <ul>
+                    <li>
+                         <h1 class="number" id="years">--</h1>
+                         <h1>years</h1>
+                    </li>
+                    <li>
+                         <h1 class="number" id="months">--</h1>
+                         <h1>months</h1>
+                    </li>
+                    <li>
+                         <h1 class="number" id="days">--</h1>
+                         <h1>days</h1>
+                    </li>
+               </ul>
+          </div>
+    </div>
+    <script>
+          let daysElement = document.getElementById("days");
+          let monthsElement = document.getElementById("months");
+          let yearsElement = document.getElementById("years");
+     
+          let dayInput = document.getElementById("day");
+          let monthInput = document.getElementById("month");
+          let yearInput = document.getElementById("year");
+
+          let yearAge = 0;
+          let monthAge = 0;
+          let dayAge = 0;
+
+          function clicked() {
+               let date  = new Date();
+               
+               yearAge = date.getFullYear() - yearInput.value;
+               yearsElement.innerHTML = yearAge;
+
+               monthAge = 12 - monthInput.value + date.getMonth();
+               if (monthAge => 12) {
+                    yearAge += 1;
+                    monthAge -= 12;
+               }
+               monthsElement.innerHTML = monthAge;
+
+               dayAge = 30 - dayInput.value + date.getDay();
+               daysElement.innerHTML = dayAge;
+          }
+    </script>
+</body>
+</html>

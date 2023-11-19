@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+    /* Primarias */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutras */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-pale-blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .side:first-child {
+    width: 450px;
+    height: 220px;
+    background-image: url("../images/illustration-hero.svg");
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container .side:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.26);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container .side:last-child h1 {
+    font-size: 28px;
+    padding: 28px;
+    color: var(--dark-blue);
+}
+
+.container .side:last-child p {
+    font-size: 18px;
+    color: var(--desaturated-blue);
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.container .side:last-child span {
+    background-color: var(--pale-blue);
+    display: flex;
+    border-radius: 13px;
+    padding: 6px;
+}
+
+.container .side:last-child span .plan {
+    padding-right: 100px;
+}
+
+.container .side:last-child span a {
+    color: var(--bright-blue);
+    text-align: center;
+    padding-top: 18px;
+    padding-right: 10px;
+}
+
+.container .side:last-child span p {
+    font-size: 16px;
+    padding: 0;
+}
+
+.container .side:last-child .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .side:last-child .buttons a:first-of-type {
+    background-color: var(--bright-blue);
+    text-decoration: none;
+    color: white;
+    width: 354px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 10px 10px hsla(245, 75%, 52%, 0.486);
+}
+
+.container .side:last-child .buttons a:last-of-type {
+    text-align: center;
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    padding-top: 20px;
+}

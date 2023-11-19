@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componente de Resultado de Sumario</title>
+  <style>
+    @font-face {
+      font-family: Fonte;
+      src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: Fonte, Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .container .side:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(to bottom, rgb(49, 45, 230), rgb(103, 67, 255));
+      width: 340px;
+      height: 512px;
+      border-radius: 33px;
+      padding: 20px;
+      color: white;
+    }
+
+    .container .side:first-child h3 {
+      padding: 25px;
+      font-size: 25px;
+      color: rgb(207, 201, 255);
+    }
+
+    .container .side:first-child div#result {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 205px;
+      height: 205px;
+      border-radius: 100%;
+      background-image: linear-gradient(to bottom, rgb(71, 43, 153), rgb(78, 57, 243));
+    }
+
+    .container .side:first-child div#result h1 {
+      padding: 5px;
+      font-size: 60px;
+    }
+
+    .container .side:first-child h2 {
+      font-size: 40px;
+      padding: 25px;
+    }
+
+    .container .side:first-child > p {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 22px;
+      text-align: center;
+      color: rgb(207, 201, 255);
+    }
+
+    .container .side:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 368px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 0px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.288);
+    }
+
+    .container .side:last-child li {
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 25px;
+    }
+
+    .container .side:last-child h3, .container .side:last-child p {
+      display: inline-block;
+    }
+
+    .container .side:last-child h2 {
+      margin-right: auto;
+      padding: 25px;
+    }
+
+    .container .side:last-child ul {
+      margin-right: auto;
+      padding-left: 30px;
+    }
+    
+    .container .side:last-child li {
+      width: 300px;
+    }
+    .container .side:last-child p {
+      margin-left: 136px;
+    }
+
+    #reaction {
+      background-color: rgba(255, 0, 0, 0.200);
+    }
+
+    #memory {
+      background-color: rgba(255, 255, 0, 0.250);
+    }
+
+    #verbal {
+      background-color: rgba(0, 255, 255, 0.200)
+    }
+
+    #visual {
+      background-color: rgba(0, 0, 139, 0.150);
+    }
+
+    .container .side:last-child a {
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 30px;
+      width: 200px;
+      background-color: rgb(48, 59, 89);
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="side">
+        <h3>Your Result</h3>
+        
+        <div id="result">
+          <h1>76</h1>
+          <p id="off100">of 100</p>
+        </div>
+
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests</p>
+      </div>
+      <div class="side">
+        <h2>Summary</h2>
+        <ul>
+          <li id="reaction">
+            <span>
+              <img src="assets/images/icon-reaction.svg" alt="">
+              <h3>Reaction</h3>
+            </span>
+            <p><b>80</b> / 100</p>
+          </li>
+          <li id="memory">
+            <span>
+              <img src="assets/images/icon-memory.svg" alt="">
+              <h3>Memory</h3>
+            </span>
+            <p><b>92</b> / 100</p>
+          </li>
+          <li id="verbal">
+            <span>
+              <img src="assets/images/icon-verbal.svg" alt="">
+              <h3>Verbal</h3>
+            </span>
+            <p><b>61</b> / 100</p>
+          </li>
+          <li id="visual">
+            <span>
+              <img src="assets/images/icon-visual.svg" alt="">
+              <h3>Visual</h3>
+            </span>
+            <p><b>72</b> / 100</p>
+          </li>
+        </ul>
+        <a href="#" class="button">Continue</a>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container:first-child {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+
+.container:last-child {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.container .box:first-child {
+    width: 411px;
+    margin-right: 400px;
+}
+
+.container .box:last-child {
+    width: 540px;
+}
+
+.container .stars {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: rgb(247, 242, 248);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.container .stars img {
+    width: 18px;
+    height: 18px;
+}
+
+.container .stars h2 {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.container h1 {
+    color: rgb(78, 33, 76);
+    font-size: 50px;
+}
+
+.container p {
+    color: rgb(140, 128, 138);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.container:last-child {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.container:last-child .feedback {
+    background-color: rgb(81, 31, 80);
+    border-radius: 10px;
+    padding: 40px;
+    margin-right: 20px;
+}
+asdasd
+.container:last-child #irene {
+    margin-top: 20px;
+}
+
+.container:last-child #anne {
+    margin-top: 40px;
+}
+
+.container:last-child .user {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.container:last-child .feedback img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.container:last-child .feedback h3:first-of-type {
+    color: white;
+}
+
+.container:last-child .feedback h3:last-of-type {
+    color: rgb(195, 95, 156);
+}
+
+.container:last-child .feedback blockquote {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
