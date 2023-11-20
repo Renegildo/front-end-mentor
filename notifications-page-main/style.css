@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+* {
+     padding: 0;
+     margin: 0;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     background-color: #F8F9FD;
+}
+
+ul {
+     list-style: none;
+}
+
+.container {
+     width: 730px;
+     height: 840px;
+     background-color: white;
+}
+
+.container .notification {
+     background-color: #F6FAFD;
+}
+
+.container .main-notification {
+     display: flex;
+}
+
+.container .main-notification p {
+     transform: translateY(10px);
+}
+
+.container ul li .pfp {
+     width: 35px;
+     height: 35px;
+}
