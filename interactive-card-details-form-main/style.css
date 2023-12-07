@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+}
+
+.big-box:first-child {
+	background-image: url(images/bg-main-desktop.png);
+	width: 450px;
+}
+
+.frontcard {
+	background-image: url(images/bg-card-front.png);
+	height: 215px;
+	width: 415px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	padding: 15px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+	transform: translate(100px, 40px);
+}
+
+.frontcard .circles {
+	display: flex;
+	align-items: center;
+}
+
+.frontcard .circle1 {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.frontcard .circle2 {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid white;
+	margin-left: 10px;
+}
+
+.frontcard h2.frontcardnumber {
+	font-size: 30px;
+	margin-top: 100px;
+}
+
+.frontcard > span:last-child {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 20px;
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+.frontcard::after {
+	width: 45px;
+	height: 45px;
+}
+
+.backcard {
+	background-image: url(images/bg-card-back.png);
+	height: 245px;
+	width: 445px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+	transform: translate(150px, 60px);
+}
+
+.backcard h3 {
+	color: white;
+	transform: translate(350px, 111px);
+	font-size: 15px
+}
+
+.big-box form {
+	margin-left: 300px;
+	margin-top: 200px;
+}
+
+.big-box form h3 {
+	font-size: 13px;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.big-box form input {
+	padding: 10px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	width: 400px;	
+}
+
+.big-box form .last-line, .big-box form .last-line .date-input {
+	display: flex;
+	padding: 0;
+}
+
+.big-box form .last-line .div-date input {
+	width: 50px;
+	margin-right: 10px;
+}
+
+.big-box form .last-line .div-cvc {
+	width: 200px;
+	margin-left: 10px;
+}
+
+.big-box form .last-line .div-cvc input {
+	width: 225px;
+}
+
+.big-box form > input:last-child {
+	cursor: pointer;
+	background: #220930;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 12px;
+	transition: box-shadow 0.5s;
+	width: 423px;
+}
+
+.big-box form > input:last-child:hover {
+	background: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+	box-shadow: 0 0 30px hsla(249, 79%, 59%, 0.836);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TESTE</title>
+</head>
+<body>
+	<h1 id="info1label">INFORMACAO 1</h1>
+	<h2 id="info2label">INFORMACAO 2</h2>
+	<form action="">
+		<label for="info1"> Preencha: <input type="text" name="info1" id="info1"> </label>
+		<label for="info2"> Preencha: <input type="text" name="info2" id="info2" oninput="input()"></label>
+	</form>
+	<script>
+		let info1label = document.getElementById("info1label");
+		let info2label = document.querySelector("#info2label");
+
+		let info1 = document.querySelector("#info1");
+		let info2 = document.querySelector("#info2");
+
+		function input() {
+			info1label.innerHTML = info1.value;
+			info2label.innerHTML = info2.value;
+			console.log(info1.value);
+			console.log("Penisdadadjkladjlak");
+		}
+	</script>
+</body>
+</html>

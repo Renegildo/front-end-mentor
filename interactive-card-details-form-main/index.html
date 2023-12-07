@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interactive Card Details Form</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="big-box">
+		<div class="frontcard">
+			<div class="circles">
+				<span class="circle1"></span>
+				<span class="circle2"></span>
+			</div>
+			<span>
+				<h2 class="frontcardnumber">0000 0000 0000 0000</h2>
+			</span>
+			<span>
+				<h3 class="frontcardholdername">JANE APPLESEED</h3>
+				<h3 class="frontexpdate">00/00</h3>
+			</span>
+		</div>
+		<div class="backcard">
+			<h3 class="backcvc">000</h3>
+		</div>
+	</div>
+	<div class="big-box">
+		<form action="">
+			<h3>CARDHOLDER NAME</h3>
+			<input type="text" name="carholdername" id="cardholdername" placeholder="e.g. Jane Appleseed" oninput="updateCard()">
+			
+			<h3>CARD NUMBER</h3>
+			<input type="text" name="cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" oninput="updateCard()" maxlength="19">
+			
+			<div class="last-line">
+				<div class="div-date">
+					<h3>EXP. DATE (MM/YY)</h3>
+					<div class="date-input">
+						<input type="number" name="expmonth" id="expmonth" placeholder="MM" oninput="updateCard()" max="12">
+						<input type="number" name="expyear" id="expyear" placeholder="YY" oninput="updateCard()" max="12">
+					</div>
+				</div>
+
+				<div class="div-cvc">
+					<h3>CVC</h3>
+					<input type="number" name="cvc" id="cvc" placeholder="e.g. 123" oninput="updateCard()" maxlength="3"> <br>
+				</div>
+			</div>
+			<input type="submit" value="Confirm" class="confirm">
+		</form>
+	</div>
+	<script>
+
+		function updateCard() {
+			const cardnumberinput = document.querySelector("#cardnumber");
+			const cardholdernameinput = document.querySelector("#cardholdername") //p
+			const expmonthinput = document.querySelector("#expmonth");
+			const expyearinput = document.querySelector("#expyear");
+			const cvcinput = document.querySelector("#cvc");
+
+			const frontcardnumber = document.querySelector(".frontcardnumber");
+			const frontcardholdername = document.querySelector(".frontcardholdername"); //p
+			const frontcardexpdate = document.querySelector(".frontexpdate");
+			const backcvc = document.querySelector(".backcvc")
+
+			if (validarCartao(cardnumberinput.value)) {
+				let cartaoFormatado = formatarCartao(cardnumberinput.value);
+				console.log('Cartão válido:', cartaoFormatado);
+			} else {
+				cardnumberinput.style.border = '1px solid red';
+				cardnumberinput.style.content = 'PENES';
+			}
+
+			frontcardnumber.innerHTML = cardnumberinput.value;
+			frontcardholdername.innerHTML = cardholdernameinput.value;
+			frontcardexpdate.innerHTML = expmonthinput.value + "/" + expyearinput.value;
+			backcvc.innerHTML = cvcinput.value;
+
+			updateInput();
+		}
+
+		function updateInput(cnumber) {
+			cnumber = formatarCartao(cnumber);
+			cardnumberinput.value = cnumber;
+		}
+
+		function validarCartao(cartao) {
+			let numeroCartao = cartao.replace(/\s/g, '');
+			if (!/^\d+$/.test(numeroCartao)) {
+				return false;
+			}
+			if (numeroCartao.length !== 16) {
+				return false;
+			}
+			let soma = 0;
+			for (let i = 0; i < 16; i++) {
+				let digito = parseInt(numeroCartao[i]);
+				if (i % 2 === 0) {
+					digito *= 2;
+					if (digito > 9) {
+					digito -= 9;
+					}
+				}
+				soma += digito;
+			}
+			return soma % 10 === 0;
+		}
+
+		function formatarCartao(cartao) {
+			let numeroCartao = cartao.replace(/\D/g, '');
+			numeroCartao = numeroCartao.replace(/(\d{4})/g, '$1 ');
+
+			return numeroCartao.trim();
+		}
+	</script>
+</body>
+</html>
