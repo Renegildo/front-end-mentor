@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+:root {
+	--very-dark-desaturated-blue-1: #E6E6E6;
+	--very-dark-desaturated-blue-2: #D3CCCD;
+	--very-dark-desaturated-blue-3: #EEEEEE;
+
+	--desaturated-dark-blue-1: #388187;
+	--desaturated-dark-blue-2: #265C65;
+
+	--red: #C85401;
+	--dark-red: #873901;
+
+	--light-grayish-orange: #E5E4E0;
+	--grayish-orange: #A69C90;
+
+	--very-dark-grayish-blue: #333328;
+
+	--primary-text-color: hsl(221, 14%, 31%);
+}

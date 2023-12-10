@@ -2,23 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-:root {
-	--very-dark-desaturated-blue-1: hsl(222, 26%, 31%);
-	--very-dark-desaturated-blue-2: hsl(223, 31%, 20%);
-	--very-dark-desaturated-blue-3: hsl(224, 36%, 15%);
-
-	--desaturated-dark-blue-1: hsl(225, 21%, 49%);
-	--desaturated-dark-blue-2: hsl(224, 28%, 35%);
-
-	--red: hsl(6, 63%, 50%);
-	--dark-red: hsl(6, 70%, 34%);
-
-	--light-grayish-orange: hsl(30, 25%, 89%);
-	--grayish-orange: hsl(28, 16%, 65%);
-
-	--very-dark-grayish-blue: hsl(221, 14%, 31%);
-}
-
 * {
 	padding: 0;
 	margin: 0;
@@ -30,7 +13,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: var(--very-dark-desaturated-blue-1);
-	color: white;
+	color: var(--primary-text-color);
 	height: 100vh;
 }
 
@@ -47,6 +30,7 @@ body {
 	border-radius: 5px;
 	font-size: 28px;
 	text-align: end;
+	color: var(--primary-text-color);
 }
 
 .buttons {
@@ -79,26 +63,30 @@ body {
 }
 
 #del {
-	background-color: var(--very-dark-desaturated-blue-1);
+	background-color: var(--desaturated-dark-blue-1);
 	color: var(--light-grayish-orange);
-	border-bottom: 3px solid var(--very-dark-desaturated-blue-3);
+	border-bottom: 3px solid var(--desaturated-dark-blue-2);
 }
 
 #del:hover {
 	background-color: var(--very-dark-desaturated-blue-3);
+	border-bottom: 3px solid var(--very-dark-desaturated-blue-3);
+	color: var(--very-dark-grayish-blue);
 }
 
 #reset {
 	width: auto;
 	grid-column: span 2;
 
-	background-color: var(--very-dark-desaturated-blue-1);
+	background-color: var(--desaturated-dark-blue-1);
    color: var(--light-grayish-orange);
-   border-bottom: 3px solid var(--very-dark-desaturated-blue-3);
+   border-bottom: 3px solid var(--desaturated-dark-blue-2);
 }
 
 #reset:hover {
 	background-color: var(--very-dark-desaturated-blue-3);
+	color: var(--very-dark-grayish-blue);
+	border-bottom: 3px solid var(--very-dark-desaturated-blue-3);
 }
 
 #equal {
@@ -112,4 +100,45 @@ body {
 
 #equal:hover {
 	background-color: var(--dark-red);
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.right-side {
+	display: flex;
+   flex-direction: column;
+}
+
+.right-side h3 {
+	font-size: 0.9em;
+	width: 100%;
+	letter-spacing: 5px;
+	margin-bottom: 5px;
+	text-align: justify;
+}
+
+.theme-selector {
+	cursor: pointer;
+	background-color: var(--very-dark-desaturated-blue-2);
+	height: 10px;
+	width: 40px;
+	padding: 3px;
+	border-radius: 20px;
+	transform: scale(1.4);
+}
+
+.ball {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: var(--red);
+	transition: transform 0.1s linear;
+}
+
+.right-side {
+	display: flex;
 }

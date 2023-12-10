@@ -1,3 +1,9 @@
+const themeSelector = document.querySelector('.theme-selector');
+const ball = document.querySelector('.ball');
+const themeStyleSheet = document.querySelector('.theme-style-sheet');
+
+let theme = 1;
+
 let operation = '';
 
 function display(char) {
@@ -11,7 +17,7 @@ function calculate() {
 		const display = document.querySelector('.display');
 		display.innerHTML = eval(operation);
 		operation = display.innerHTML;
-		display.style.border = '1px solid #181F32';	
+		display.style.border = '0';
 	} catch (error) {
 		const display = document.querySelector('.display');
 		display.style.border = '1px solid #D03F2F';
@@ -27,7 +33,25 @@ function del() {
 
 function reset() {
 	const display = document.querySelector('.display');
-	display.style.border = '1px solid #181F32';
+	display.style.border = '0';
 	operation = '';
 	display.innerHTML = '';
 }
+
+themeSelector.addEventListener('click', () => {
+	switch (theme) {
+		case 1:
+			ball.style.transform = 'translateX(15px)';
+			theme = 2;
+			break;
+		case 2:
+			ball.style.transform = 'translateX(30px)';
+			theme = 3;
+			break;
+		case 3:
+			ball.style.transform = 'translateX(0)';
+			theme = 1;
+			break;
+	}
+	themeStyleSheet.setAttribute('href', `css/themes/theme${theme}.css`);
+});

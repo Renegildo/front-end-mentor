@@ -4,14 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculator</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="main.js"></script>
+	<link rel="stylesheet" href="css/themes/theme3.css" class="theme-style-sheet">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="container">
 		<div class="header">
 			<h2>calc</h2>
-			<div class="theme-selector"></div>
+
+			<div class="right-side">
+				<h3>1 2 3</h3>
+				<div class="theme-selector">
+					<div class="ball"></div>
+				</div>
+			</div>
+			
 		</div>
 		<div class="display">
 			
@@ -38,5 +45,6 @@
 			<div class="button" id="equal" onclick="calculate()">=</div>
 		</div>
 	</div>
+	<script src="main.js"></script>
 </body>
 </html>
