@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo App</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link class="theme-style-sheet" rel="stylesheet" href="css/themes/theme2.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="container">
+		<header>
+			<h1>TODO</h1>
+			<div class="theme-selector">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path fill="currentColor" d="M235.54 150.21a104.84 104.84 0 0 1-37 52.91A104 104 0 0 1 32 120a103.09 103.09 0 0 1 20.88-62.52a104.84 104.84 0 0 1 52.91-37a8 8 0 0 1 10 10a88.08 88.08 0 0 0 109.8 109.8a8 8 0 0 1 10 10Z"/></svg>
+			</div>
+		</header>
+		<div class="new-todo">
+			<input type="text" placeholder="Create a new todo...">
+		</div> <!-- /.new-task -->
+		<div class="todo-list">
+			
+			<ul class="tasks">
+				<!-- { Tasks will be (here) } -->
+			</ul>
+
+			<footer>
+				<span class="items-left">5 Items left</span>
+				<div class="together">
+					<span class="all-button" onclick="setFilter('all')">All</span>
+					<span class="active-button" onclick="setFilter('active')">Active</span>
+					<span class="completed-button" onclick="setFilter('completed')">Completed</span>
+				</div> <!-- /.together -->
+				<span class="clear-completed-button" onclick="clearCompleted()">Clear Completed</span>
+			</footer>
+		</div> <!-- /.todo-list -->
+		<div class="mobile-footer">
+			
+			<span class="all-button" onclick="setFilter('all')">All</span>
+			<span class="active-button" onclick="setFilter('active')">Active</span>
+			<span class="completed-button" onclick="setFilter('completed')">Completed</span>
+		</div> <!-- /.menu-mobile -->
+	</div> <!-- /.container -->
+</body>
+</html>
