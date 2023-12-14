@@ -79,6 +79,7 @@ body {
 	width: 20px;
 	border-radius: 50%;
 	left: 48%;
+	top: 50%;
 	border: 5px solid var(--neon-green);
 	border-top: 5px solid transparent;
 	animation: loading .7s infinite linear;

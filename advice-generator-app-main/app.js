@@ -3,16 +3,20 @@ const quote = document.querySelector('.container p');
 const loading = document.querySelector('.loading');
 const generateButton = document.querySelector('.container button');
 
-async function generateQuote() {
-	let response = await fetch('https://api.adviceslip.com/advice');
+async function generateAdvice() {
 	loading.style.visibility = 'visible';
 	quote.style.visibility = 'hidden';
+
+	let timestamp = new Date().getTime();
+	let response = await fetch(`https://api.adviceslip.com/advice?timestamp=${timestamp}`);
 	let data = await response.json();
+
 	loading.style.visibility = 'hidden';
 	quote.style.visibility = 'visible';
 
-	quote.innerHTML = `"${data.slip.advice}"`;
-	console.log(data.slip.advice);
-	title.innerHTML = `ADVICE #${data.slip.id}`;
-	console.log(data.slip.id);
+	const advice = data.slip.advice;
+	const id = data.slip.id;
+
+	title.innerHTML = `#${id}`;
+	quote.innerHTML = `"${advice}"`;
 }
