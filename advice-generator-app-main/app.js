@@ -20,3 +20,5 @@ async function generateAdvice() {
 	title.innerHTML = `ADVICE #${id}`;
 	quote.innerHTML = `"${advice}"`;
 }
+
+////////
