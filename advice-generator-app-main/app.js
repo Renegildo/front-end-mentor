@@ -17,6 +17,6 @@ async function generateAdvice() {
 	const advice = data.slip.advice;
 	const id = data.slip.id;
 
-	title.innerHTML = `#${id}`;
+	title.innerHTML = `ADVICE #${id}`;
 	quote.innerHTML = `"${advice}"`;
 }
