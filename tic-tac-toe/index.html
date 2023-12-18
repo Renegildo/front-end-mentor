@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<div class="overlay"></div>
+	<div class="pop-up win">
+		<h3>YOU WON!</h3>
+		<h1><svg class="x" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 8 8"><path fill="currentColor" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z"/></svg>TAKES THE ROUND</h1>
+		<div class="buttons">
+			<button id="quit-pop-up" onclick="quitPopup()">QUIT</button>
+			<button id="next-round-pop-up" onclick="nextRound()">NEXT ROUND</button>
+		</div>
+	</div>
+	<div class="pop-up lose">
+		<h3>YOU LOSE!</h3>
+		<h1 style="color: var(--yellow);"><svg class="o" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 448 512"><path fill="currentColor" d="M224 96a160 160 0 1 0 0 320a160 160 0 1 0 0-320m224 160a224 224 0 1 1-448 0a224 224 0 1 1 448 0"/></svg>TAKES THE ROUND</h1>
+		<div class="buttons">
+			<button id="quit-pop-up" onclick="quitPopup()">QUIT</button>
+			<button id="next-round-pop-up" onclick="nextRound()">NEXT ROUND</button>
+		</div>
+	</div>
+	<div class="pop-up tie">
+		<h3>YOU GOT A TIE!</h3>
+		<h1>NOBODY WINS</h1>
+		<div class="buttons">
+			<button id="quit-pop-up" onclick="quitPopup()">QUIT</button>
+			<button id="next-round-pop-up" onclick="nextRound()">NEXT ROUND</button>
+		</div>
+	</div>
+	<div class="container">
+		<header>
+			<div class="item">
+				<svg class="x" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8"><path fill="currentColor" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z"/></svg>
+				<svg class="o"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512"><path fill="currentColor" d="M224 96a160 160 0 1 0 0 320a160 160 0 1 0 0-320m224 160a224 224 0 1 1-448 0a224 224 0 1 1 448 0"/></svg>
+			</div>
+			<div class="item">
+				<div class="turn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 8 8"><path fill="currentColor" d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72z"/></svg>
+					<span>TURN</span>
+				</div>
+			</div>
+			<div class="item">
+				<div class="restart" onclick="resetBoard()">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M18.258 3.508a.75.75 0 0 1 .463.693v4.243a.75.75 0 0 1-.75.75h-4.243a.75.75 0 0 1-.53-1.28L14.8 6.31a7.25 7.25 0 1 0 4.393 5.783a.75.75 0 0 1 1.488-.187A8.75 8.75 0 1 1 15.93 5.18l1.51-1.51a.75.75 0 0 1 .817-.162"/></svg>
+				</div>
+			</div>
+		</header>
+ 
+		<div class="board">
+			<div class="board-pos board-pos-1" onclick="playerMove(0)"></div>
+			<div class="board-pos board-pos-2" onclick="playerMove(1)"></div>
+			<div class="board-pos board-pos-3" onclick="playerMove(2)"></div>
+			<div class="board-pos board-pos-4" onclick="playerMove(3)"></div>
+			<div class="board-pos board-pos-5" onclick="playerMove(4)"></div>
+			<div class="board-pos board-pos-6" onclick="playerMove(5)"></div>
+			<div class="board-pos board-pos-7" onclick="playerMove(6)"></div>
+			<div class="board-pos board-pos-8" onclick="playerMove(7)"></div>
+			<div class="board-pos board-pos-9" onclick="playerMove(8)"></div>
+		</div>
+		
+		<footer>
+			<div class="item">
+				<p>X (YOU)</p>
+				<h4 id="wins">0</h4>
+			</div>
+			<div class="item">
+				<p>TIES</p>
+				<h4 id="ties">0</h4>
+			</div>
+			<div class="item">
+				<p>O (CPU)</p>
+				<h4 id="loses">0</h4>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
